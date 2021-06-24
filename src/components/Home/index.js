@@ -85,7 +85,7 @@ const Home = () => {
 					<UnityPreview
 						key={index}
 						unity={unity}
-						inverse={index % 2 == 0 ? true : false}></UnityPreview>
+						inverse={index % 2 === 0 ? true : false}></UnityPreview>
 				))
 			}
 
