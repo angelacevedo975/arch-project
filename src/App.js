@@ -5,6 +5,10 @@ import Home from './components/Home';
 import Navbar from "./components/Navbar";
 import Unity1 from "./components/Unity/unity1"
 import Unity2 from "./components/Unity/unity2"
+import Unity3 from "./components/Unity/unity3"
+import Unity4 from "./components/Unity/unity4"
+import Zoom from "react-reveal/Zoom"
+import Fade from "react-reveal/Fade"
 
 function App() {
 	return (
@@ -12,19 +16,29 @@ function App() {
 			<Navbar></Navbar>
 			<Switch>
 				<Route exact path="/">
-					<Home></Home>
+					<Fade>
+						<Home></Home>
+					</Fade>
 				</Route>
 				<Route path="/unity1">
-					<Unity1></Unity1>
+					<Zoom>
+						<Unity1></Unity1>
+					</Zoom>
 				</Route>
 				<Route path="/unity2">
-					<Unity2></Unity2>
+					<Zoom>
+						<Unity2></Unity2>
+					</Zoom>
 				</Route>
 				<Route path="/unity3">
-					<h1>Unity 3</h1>
+					<Zoom>
+						<Unity3></Unity3>
+					</Zoom>
 				</Route>
 				<Route path="/unity4">
-					<h1>Unity 4</h1>
+					<Zoom>
+						<Unity4></Unity4>
+					</Zoom>
 				</Route>
 			</Switch>
 			<Footer></Footer>
