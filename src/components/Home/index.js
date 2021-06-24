@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import QuienesSomos from "../QuienesSomos"
+import UnityPreview from "../UnityPreview"
 import Projects from "../Projects"
 import Technologies from "../Technologies"
+import unityData from "./unityData"
 
 const HeroWrapper = styled.div`
 	height:480px;
@@ -15,9 +16,10 @@ const HeroWrapper = styled.div`
 	flex-direction:row;
 	justify-content:center;
 	align-items:center;
-	background: #8E2DE2;
+	/*background: #8E2DE2;
 	background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-	background: linear-gradient(to right, #4A00E0, #8E2DE2); 
+	background: linear-gradient(to right, #4A00E0, #8E2DE2); */
+	background-color: #262626;
 `
 
 const HeroContainer = styled.div`
@@ -69,19 +71,24 @@ const Home = () => {
 			<HeroWrapper className="">
 				<HeroContainer className="container">
 					<HeroContent className="">
-						<HeroTitle>Welcome to my Portfolio</HeroTitle>
-						<HeroText>My name is Angel Acevedo and I am web developer, ¿Do you wanna know more about me?</HeroText>
-						<button className="btn btn-secondary btn-lg">Contact Me</button>
+						<HeroTitle>Proyecto Final Arquitectura De Computadoras</HeroTitle>
+						<HeroText>Hola!, mi nombre es Angel Dominguez Acevedo y este es mi proyecto de investigacion de arquitectura de computadoras.</HeroText>
+						<button className="btn btn-secondary btn-lg">Ver Código</button>
 					</HeroContent>
-					<div className="d-none d-md-block">
+					<div className="d-none ">
 						<img alt="mainImage" style={{ width: "100%", height: "100%" }} src="/logo512.png"></img>
 					</div>
 				</HeroContainer>
 			</HeroWrapper>
-			<QuienesSomos></QuienesSomos>
-			<Technologies></Technologies>
-			<Projects></Projects>
-			
+			{
+				unityData().map((unity, index) => (
+					<UnityPreview
+						key={index}
+						unity={unity}
+						inverse={index % 2 == 0 ? true : false}></UnityPreview>
+				))
+			}
+
 		</>
 	)
 }

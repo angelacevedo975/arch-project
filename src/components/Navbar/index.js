@@ -9,16 +9,20 @@ const routes = [
 		path: "/",
 	},
 	{
-		name: "About",
-		path: "/about",
+		name: "Unidad 1",
+		path: "/unity1",
 	},
 	{
-		name: "Contact",
-		path: "/contact",
+		name: "Unidad 2",
+		path: "/unity2",
 	},
 	{
-		name: "Products",
-		path: "/products",
+		name: "Unidad 3",
+		path: "/unity3",
+	},
+	{
+		name: "Unidad 4",
+		path: "/unity4",
 	},
 ]
 
@@ -34,8 +38,8 @@ const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style={{zIndex:10,}}>
 			<div className="container">
-				<a className="navbar-brand" href="#">
-					<img height="60" src="/random.svg" alt="logo-page"></img>
+				<a className="navbar-brand" href="/">
+					Arquitectura De Computadoras
 				</a>
 				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon" />
@@ -45,7 +49,7 @@ const Navbar = () => {
 						{
 							routes.map((route, index) => (
 								<Link key={index}
-									className={`nav-link ${route.path === currentWindow && "active"}`}
+									className={`nav-link ${""/*route.path === currentWindow && "active"*/}`}
 									aria-current="page"
 									to={route.path}
 									onClick={() => setCurrentWindow(route.path)}
@@ -53,7 +57,7 @@ const Navbar = () => {
 								>{route.name}</Link>
 							))
 						}
-						<Link to="/contact" className="btn btn-secondary">Contact</Link>
+						<Link to="#" className="btn btn-secondary">Ver Código</Link>
 					</div>
 				</div>
 			</div>
