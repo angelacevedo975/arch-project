@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
 import "./App.css"
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -9,10 +9,24 @@ import Unity3 from "./components/Unity/unity3"
 import Unity4 from "./components/Unity/unity4"
 import Zoom from "react-reveal/Zoom"
 import Fade from "react-reveal/Fade"
+import React, { useEffect } from "react"
+
+function ScrollToTop() {
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
+
+	return null;
+}
+
 
 function App() {
+
 	return (
 		<Router>
+			<ScrollToTop></ScrollToTop>
 			<Navbar></Navbar>
 			<Switch>
 				<Route exact path="/">

@@ -57,7 +57,7 @@ const Navbar = () => {
 								>{route.name}</Link>
 							))
 						}
-						<Link to="#" className="btn btn-secondary">Ver Código</Link>
+						<a className="btn btn-secondary" href="https://github.com/angelacevedo975/arch-project" rel="noreferrer" target="_BLANK">Ver Código</a>
 					</div>
 				</div>
 			</div>

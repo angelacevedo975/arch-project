@@ -73,7 +73,7 @@ const Home = () => {
 					<HeroContent className="">
 						<HeroTitle>Proyecto Final Arquitectura De Computadoras</HeroTitle>
 						<HeroText>Hola!, mi nombre es Angel Dominguez Acevedo y este es mi proyecto de investigacion de arquitectura de computadoras.</HeroText>
-						<button className="btn btn-secondary btn-lg">Ver Código</button>
+						<a className="btn btn-secondary btn-lg" href="https://github.com/angelacevedo975/arch-project" rel="noreferrer" target="_BLANK">Ver Código</a>
 					</HeroContent>
 					<div className="d-none ">
 						<img alt="mainImage" style={{ width: "100%", height: "100%" }} src="/logo512.png"></img>

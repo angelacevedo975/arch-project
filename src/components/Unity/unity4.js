@@ -68,10 +68,66 @@ const Unity4 = () => {
 					</ul>
 					<h4>Arquitectura de computadores secuenciales</h4>
 					<p>
-					Tradicionalmente, los programas informáticos se han escrito para el cómputo en serie. Para resolver un problema, se construye un algoritmo y se implementa como un flujo en serie de instrucciones. Estas instrucciones se ejecutan en una unidad central de procesamiento en un ordenador. Sólo puede ejecutarse una instrucción a la vez y un tiempo después de que la instrucción ha terminado, se ejecuta la siguiente.
+						Tradicionalmente, los programas informáticos se han escrito para el cómputo en serie. Para resolver un problema, se construye un algoritmo y se implementa como un flujo en serie de instrucciones. Estas instrucciones se ejecutan en una unidad central de procesamiento en un ordenador. Sólo puede ejecutarse una instrucción a la vez y un tiempo después de que la instrucción ha terminado, se ejecuta la siguiente.
+					</p>
+					<h4>Organización de direcciones de memoria.</h4>
+					<p>
+						La jerarquía de memoria es la organización piramidal de la memoria en niveles que tienen las computadoras.
+						El objetivo es acercarse el rendimiento de una memoria de gran velocidad al coste de una memoria de baja velocidad, basándose en el principio de cercanía de referencias.
+					</p>
+					<ul>
+						<li>
+							Nivel 0: Registro
+						</li>
+						<li>
+							Nivel 1: Memoria caché
+						</li>
+						<li>
+							Nivel 2: Memoria primaria (RAM)
+						</li>
+						<li>
+							Nivel 3: Disco duro (con el mecanismo de memoria virtual)
+						</li>
+						<li>
+							Nivel 4: Cintas magnéticas (consideradas las más lentas, con mayor capacidad, de acceso secuencial)
+						</li>
+					</ul>
+					<h2>Sistemas de memoria compartida</h2>
+					<p>
+						Un multiprocesador puede verse como un computador paralelo compuesto por varios procesadores interconectados que comparten un mismo sistema de memoria.
+						Los sistemas multiprocesadores son arquitecturas MIMD con memoria compartida. Tienen un único espacio de direcciones para todos los procesadores y los mecanismos de comunicación se basan en el paso de mensajes desde el punto de vista del programador.
 					</p>
 					<p>
-						
+						Dado que los multiprocesadores comparten diferentes módulos de memoria, pudiendo acceder a un mismo módulo varios procesadores, a los multiprocesadores también se les llama sistemas de memoria compartida.
+					</p>
+					<p>
+						Dependiendo de la forma en que los procesadores comparten la memoria, se clasifican en sistemas multiprocesador UMA, NUMA y COMA.
+					</p>
+					<h4>Redes de interconexión dinámica</h4>
+					<p>
+						Una red dinámica es una red cuya topología puede variar durante el curso de la ejecución de un programa paralelo o entre dos ejecuciones de programas. La red está constituida por elementos materiales específicos, llamados commutadores o switches. Las redes dinámicas se utilizan sobre todo en los multiprocesadores.
+					</p>
+					<h2>Sistemas de memoria distribuida</h2>
+					<p>
+						La Distributed Shared Memory (DSM, o memoria distribuida compartida) es un tipo de implementación hardware y software, en la que cada nodo de un cluster tiene acceso a una amplia memoria compartida que se añade a la memoria limitada privada, no compartida, propia de cada nodo.
+					</p>
+					<p>
+						Los sistemas de software DSM pueden ser implementados bajo un sistema operativo (SO), o como una biblioteca de programación. Los sistemas de software DSM implementados en el SO pueden concebirse como extensiones de la arquitectura de memoria virtual subyacente. Estos sistemas son transparentes al desarrollador, lo que significa que la memoria distribuida subyacente está completamente oculta para los usuarios. En contraste, los sistemas de software DSM implementados en una biblioteca no son transparentes y los desarrolladores tienen que programarlos separadamente. Sin embargo, estos últimos sistemas ofrecen mejores características de portabilidad en la implementación de sistemas DSM.
+					</p>
+					<h4>Redes de interconexión estáticas</h4>
+					<p>
+						Una red estática es una red cuya topología queda definida de manera definitiva y estable durante la construcción de la máquina paralela. ... La red está constituida por elementos materiales específicos, llamados commutadores o switches. Las redes dinámicas se utilizan sobre todo en los multiprocesadores.
+					</p>
+					<p>
+						Uno de los criterios más importantes para la clasificación de las redes es el que
+						tiene en cuenta la situación de la red en la máquina paralela, dando lugar a dos familias
+						de redes: redes estáticas y redes dinámicas. Una red estática es una red cuya topología
+						queda definida de manera definitiva y estable durante la construcción de la máquina
+						paralela. La red simplemente une los diversos elementos de acuerdo a una configuración
+						dada. Se utiliza sobre todo en el caso de los multicomputadores para conectar los
+						diversos procesadores que posee la máquina. Por la red sólo circulan los mensajes entre
+						procesadores, por lo que se dice que la red presenta un acoplamiento débil. En general,
+						en las redes estáticas se exige poca carga a la red.
 					</p>
 				</InfoContainer>
 			</div>
